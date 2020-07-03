@@ -1,0 +1,19 @@
+using System;
+
+namespace MarketStore
+{
+    public class StartUp
+    {
+        static void Main(string[] args)
+        {
+            var testOwner = new Owner("test", "test", "0123456789", "test@testing.com");
+
+            var bronze = new BronzeCard(0, 150, testOwner);
+            var silver = new SilverCard(600, 850, testOwner);
+            var gold = new GoldCard(900, 1300, testOwner);
+
+            Console.WriteLine($"{bronze}{Environment.NewLine}{silver}{Environment.NewLine}{gold}");
+        }
+
+    }
+}
